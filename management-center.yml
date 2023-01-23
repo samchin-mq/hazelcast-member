@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: management-center
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: management-center
+  template:
+    metadata:
+      labels:
+        app: management-center
+    spec:
+      containers:
+      - name: hazelcast
+        image: hazelcast/management-center
