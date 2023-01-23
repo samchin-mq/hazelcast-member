@@ -18,9 +18,11 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.6.10/maven-plugin/reference/html/#build-image)
 
 
+#VM options for local: 
+-Dspring.profiles.active=local -Dserver.port=8081
 
-API
 
+#local API
 http://localhost:8081/betline/preDump --load 1k record from resources 
 http://localhost:8081/betline/load?number=10000 --generate 10k records
 http://localhost:8081/betline/predicate?lottery=11X5JSC&game=11X5-DX2&drawNumber=2023001 --query with predicate
